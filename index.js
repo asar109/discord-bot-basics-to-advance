@@ -1,5 +1,6 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 const eventHandlers = require("./handlers/eventHandlers");
+const mongoConnector = require("./utils/mongoConnector");
 require("dotenv").config({
   path: "./config/.env",
 });
@@ -11,6 +12,10 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 });
+
+// MongoDB connector
+
+mongoConnector();
 
 eventHandlers(client);
 
