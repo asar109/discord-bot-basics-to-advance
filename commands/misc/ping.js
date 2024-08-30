@@ -7,7 +7,7 @@ module.exports = {
   deleted: false,
   callBack: async (client, interaction) => {
     await interaction.deferReply();
-    await wait(4_000);
+    await wait(2_000);
     await interaction.editReply("Pong!");
   },
 };
