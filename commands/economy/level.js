@@ -18,7 +18,7 @@ module.exports = {
     {
       name: "target-user",
       description: "Select user who's rank/level to be shown",
-      type: ApplicationCommandOptionType.Mentionable,
+      type: ApplicationCommandOptionType.Role,
     },
   ],
   /**
